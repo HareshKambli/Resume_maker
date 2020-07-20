@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-md-12">
+                <h2>CV database profile list</h2>
+            </div>
+        </div>
+
+        {% for i in profile %}
+        <div class="row">
+            <div class="col-md-6">
+                {{i.name}}
+            </div>
+            <div class="col-md-1">
+                <a href="/viewCv/{{i.id}}" class="btn btn-warning">View CV</a>
+            </div>
+            <div class="col-md-5">
+                <a href="/{{i.id}}" class="btn btn-warning">Download CV</a>
+            </div>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+</body>
+</html>

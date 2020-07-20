@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create CV</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron">
+    <h1><center>Resume Maker</center></h1>
+                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form method="post">
+              {% csrf_token %}
+                <h3>Personal Details</h3>
+                <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                      </div>
+
+                        <div class="form-group col-md-6">
+                        <label for="">Father's Name</label>
+                        <input type="text" class="form-control" id="father_name" name="father_name">
+                      </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" id="email" name="email">
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="">Gender</label>
+                    <input type="text" class="form-control" id="gender" name="gender">
+                  </div>
+
+                  <div class="form-group col-md-4">
+                    <label for="">Date of Birth</label>
+                    <input type="text" class="form-control" id="dob" name="dob" placeholder="DD/MM/YYYY">
+                  </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="">Phone</label>
+                        <input type="text" class="form-control" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="">Nationality</label>
+                        <input type="text" class="form-control" id="nationality" name="nationality">
+                    </div>
+
+                    <div class="form-group col-md-8">
+                        <label for="">Languages Known</label>
+                        <input type="text" class="form-control" id="language" name="language">
+                    </div>
+                </div>
+                <br>
+                <!--   Work Details -->
+
+                <h3>Work Details</h3>
+
+                    <div class="form-group">
+                        <label for="">Summary</label>
+                        <textarea type="text" class="form-control" id="summary" name="summary"></textarea>
+                     </div>
+                    <br>
+                    <p>Work Experience</p>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-1">
+                            <label for="">1.</label>
+                        </div>
+                        <div class="form-group col-md-7">
+                            <input type="text" class="form-control" id="company_name1" name="company_name1" placeholder="Company Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="company_exp1" name="company_exp1" placeholder="Years of Exp">
+                        </div>
+
+                        <div class="form-group col-md-11 offset-md-1">
+                            <textarea rows="8" type="text" class="form-control" id="company_desc1" name="company_desc1" placeholder="Work Description"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <div class="form-group col-md-1">
+                            <label for="">2.</label>
+                        </div>
+                        <div class="form-group col-md-7">
+                            <input type="text" class="form-control" id="company_name2" name="company_name2" placeholder="Company Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" id="company_exp2" name="company_exp2" placeholder="Years of Exp">
+                        </div>
+
+                        <div class="form-group col-md-11 offset-md-1">
+                            <textarea  rows="8" type="text" class="form-control" id="company_desc2" name="company_desc2" placeholder="Work Description"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Skills</label>
+                        <textarea type="text" class="form-control" id="skills" name="skills"></textarea>
+                    </div>
+                    <br><br>
+                <!--   Education Details -->
+
+                <h3>Education Details</h3>
+                <br>
+                <table class="table table-borderless">
+                      <thead >
+                        <tr>
+                            <th scope="col"></th>
+                          <th scope="col">Board/University</th>
+                          <th scope="col">School/College Name</th>
+                          <th scope="col">Passing Year</th>
+                          <th scope="col">Percentage/CGPA</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row"><label for="">10th</label></th>
+                          <td><input type="text" class="form-control" id="school_university" name="school_university"></td>
+                          <td><input type="text" class="form-control" id="school_name" name="school_name"></td>
+                          <td><input type="text" class="form-control" id="school_pass_year" name="school_pass_year"></td>
+                          <td><input type="text" class="form-control" id="school_percentage" name="school_percentage"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><label for="">12th/Diploma</label></th>
+                          <td><input type="text" class="form-control" id="college_university" name="college_university"></td>
+                          <td><input type="text" class="form-control" id="college_name" name="college_name"></td>
+                          <td><input type="text" class="form-control" id="college_pass_year" name="college_pass_year"></td>
+                          <td><input type="text" class="form-control" id="college_percentage" name="college_percentage"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"><input type="text" class="form-control" id="degree_course" name="degree_course" placeholder="Degree"></th>
+                          <td><input type="text" class="form-control" id="degree_university" name="degree_university"></td>
+                          <td><input type="text" class="form-control" id="degree_college_name" name="degree_college_name"></td>
+                          <td><input type="text" class="form-control" id="degree_pass_year" name="degree_pass_year"></td>
+                          <td><input type="text" class="form-control" id="degree_percentage" name="degree_percentage"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+              <br><br>
+
+              <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

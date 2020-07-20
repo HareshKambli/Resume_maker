@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="box-sizing: border-box;width: 90%; margin: 0 auto; border: outset #D3C8C6 3px; padding: 10px 50px 10px;">
+        <center><h1>{{user_profile.name}}</h1>
+            <br>{{user_profile.email}}
+            <br>{{user_profile.phone}}
+        </center>
+        <hr>
+        <h4 style="background-color:#DAD7D6">Summary</h4>
+        <p>{{user_profile.summary}}</p>
+        <hr>
+        <h4 style="background-color:#DAD7D6">Work Experience</h4>
+        <div style="width:80%; padding:20px" >
+            <b>Company Name: {{user_profile.company_name1}}</b>
+            <br>Years of Experience: {{user_profile.company_exp1}}
+            <br>Work Description:<br>
+                <div style="padding:10px">
+                    {{user_profile.company_desc1}}
+                </div>
+        </div>
+
+        <div style="width:80%; padding:20px" >
+            <b>Company Name: {{user_profile.company_name2}}</b>
+            <br>Years of Experience: {{user_profile.company_exp2}}
+            <br>Work Description:<br>
+                <div style="padding:10px">
+                    {{user_profile.company_desc2}}
+                </div>
+        </div>
+
+        <hr>
+        <h4 style="background-color:#DAD7D6">Skills</h4>
+        <p>{{user_profile.skills}}</p>
+
+
+        <hr><br>
+        <h4 style="background-color:#DAD7D6">Education</h4>
+        <br>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Course</th>
+                  <th scope="col">University/Board</th>
+                  <th scope="col">College</th>
+                  <th scope="col">Passing Year</th>
+                  <th scope="col">Percentage/CGPA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Degree</th>
+                  <td>{{user_profile.degree_university}}</td>
+                  <td>{{user_profile.degree_college_name}}</td>
+                  <td>{{user_profile.degree_pass_year}}</td>
+                  <td>{{user_profile.degree_percentage}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">12th/Diploma</th>
+                  <td>{{user_profile.college_university}}</td>
+                  <td>{{user_profile.college_name}}</td>
+                  <td>{{user_profile.college_pass_year}}</td>
+                  <td>{{user_profile.college_percentage}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">10th</th>
+                  <td>{{user_profile.school_university}}</td>
+                  <td>{{user_profile.school_name}}</td>
+                  <td>{{user_profile.school_pass_year}}</td>
+                  <td>{{user_profile.school_percentage}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+        <hr>
+
+        <hr>
+        <h4 style="background-color:#DAD7D6">Personal Details</h4>
+        <table class="table table-borderless">
+          <tbody>
+            <tr>
+              <th scope="row">Name</th>
+              <td>{{user_profile.name}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Father Name</th>
+              <td>{{user_profile.father_name}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Date of Birth</th>
+              <td>{{user_profile.dob}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Gender</th>
+              <td>{{user_profile.gender}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Nationality</th>
+              <td>{{user_profile.nationality}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Languages knows</th>
+              <td>{{user_profile.language}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <h4 style="background-color:#DAD7D6">Declaration</h4>
+
+        <p style="padding:20px;">I hereby affirm that all the above information in this document is true to best of my knowledge</p>
+        <p style="text-align:right; padding-right:50px"><b>Thank You.</b></p>
+
+
+    </div>
+
+
+
+</body>
+</html>
